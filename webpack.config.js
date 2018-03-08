@@ -3,5 +3,16 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
-  watch: true
+  module: {
+    rules: [
+      {
+        test: /\.es6$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.es6']
+  }
 }
