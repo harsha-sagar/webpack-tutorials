@@ -3,5 +3,4 @@ let login = (username, password) => {
 		console.log('incorrect login');
 	}
 };
-
-login('admin', 'dontknow');
+export {login}
