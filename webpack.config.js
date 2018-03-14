@@ -1,28 +1,12 @@
 const path    = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   context: path.resolve('js'),
-  entry: {
-    home: './home_page.js',
-    about: './about_page.js',
-    contact: './contact_page.js'
-  },
+  entry: ["./app"],
   output: {
     path: path.resolve('build/js/'),
     publicPath: '/public/assets/js/',
-    filename: "[name].js"
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          name: "shared",
-          chunks: "initial",
-          minChunks: 2
-        }
-      }
-    }
+    filename: "bundle.js"
   },
   devServer: {
     contentBase: 'public'
@@ -30,13 +14,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.es6$/,
+        test: /\.css$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.es6']
+    extensions: ['.js', '.css'],
   }
 }
