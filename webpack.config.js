@@ -19,9 +19,9 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|ttf|eot)$/,
         exclude: /node_modules/,
-        use: 'url-loader?limit=100000'
+        use: 'url-loader?limit=10000'
       }
     ]
   },
