@@ -1,3 +1,3 @@
 ### Summary -  
-Covers basics to start with Webpack4  
-Different branches corresponds to play around with different features of Webpack4
+- Playing around concepts of webpack library version-4.
+- Different branches corresponds to different concepts learnt & concerned examples.
